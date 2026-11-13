@@ -1,0 +1,22 @@
+{
+  "name": "campusconnect",
+  "version": "1.0.0",
+  "description": "CampusConnect – Campus Lost & Found Management System",
+  "scripts": {
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "seed": "cd server && npm run seed",
+    "seed:admin": "cd server && npm run seed:admin",
+    "test:server": "cd server && npm test",
+    "build:client": "cd client && npm run build"
+  },
+  "keywords": [
+    "mern",
+    "lost-and-found",
+    "college",
+    "campusconnect"
+  ],
+  "author": "CampusConnect Team",
+  "license": "ISC"
+}
+
