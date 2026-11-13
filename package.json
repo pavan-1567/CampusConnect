@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "CampusConnect – Campus Lost & Found Management System",
   "scripts": {
+    "dev": "node ./node_modules/concurrently/dist/bin/concurrently.js -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
+    "start": "node ./node_modules/concurrently/dist/bin/concurrently.js -n \"BACKEND,FRONTEND\" -c \"blue,green\" \"npm run server\" \"npm run client\"",
     "server": "cd server && npm run dev",
     "client": "cd client && npm run dev",
     "seed": "cd server && npm run seed",
@@ -17,6 +19,8 @@
     "campusconnect"
   ],
   "author": "CampusConnect Team",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
-

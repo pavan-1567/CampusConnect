@@ -195,19 +195,34 @@ You can immediately sign in to test the application using these pre-configured a
 
 ## 8. Running the Application
 
-### Option A: Run Both Together
-From the root directory:
+### Option A: Run Both Together (Recommended)
+From the root project directory:
 ```bash
-# Terminal 1: Run Express REST API backend (:5000)
+npm run dev
+```
+*(Uses `concurrently` to launch the Express backend and Vite React frontend concurrently with labeled live terminal output).*
+
+### Option B: Run in Separate Terminals
+```bash
+# Terminal 1: Backend
 npm run server
 
-# Terminal 2: Run Vite React frontend (:3000)
+# Terminal 2: Frontend
 npm run client
 ```
 
-### Option B: Run Individually
+### Option C: Run From Subdirectories
 ```bash
-# Backend only:
+# Backend
+cd server
+npm run dev
+
+# Frontend
+cd client
+npm run dev
+```
+
+The frontend will be available at **`http://localhost:3000`** and will proxy all `/api` and `/uploads` requests dynamically to the backend port configured in `server/.env` (defaulting to `5001` or `5000`).
 cd server
 npm run dev
 
